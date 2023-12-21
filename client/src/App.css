@@ -52,22 +52,29 @@ input:focus {
 }
 
 .submit-button {
-  background-color: #4e4e4e;
-  color: #fff;
-  border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  padding: 7px 7px;
-  border-radius: 10%;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: color 0.3s;
 }
 
 .submit-button:hover {
-  background-color: #3f3f3f;
+  color: #3f3f3f;
 }
 
 i {
   color: #a5a5a5;
+  transition: color 0.3s;
+}
+
+.delete-button {
+  cursor: pointer;
+}
+
+.delete-button > a > i:hover {
+  color: #912323;
+}
+
+.edit-button > a > i:hover {
+  color: #3091e0;
 }
 
 p {

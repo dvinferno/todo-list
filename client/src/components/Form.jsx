@@ -1,8 +1,20 @@
+/* eslint-disable react/prop-types */
 import IconButton from "./IconButton";
-function Form() {
-  const handleButtonClick = () => {
-    // Add your button click logic here
-    console.log("Button clicked!");
+import { useState } from "react";
+
+function Form(props) {
+  const [todoItem, setTodoItem] = useState("");
+
+  const handleButtonClick = (e) => {
+    if (todoItem == "") {
+      return;
+    }
+    e.preventDefault();
+    props.handleSubmit(todoItem);
+  };
+
+  const handleChange = (e) => {
+    setTodoItem(e.target.value);
   };
 
   return (
@@ -13,6 +25,8 @@ function Form() {
           id="todoItem"
           name="todoItem"
           placeholder="What needs to be done?"
+          value = {todoItem}
+          onChange={handleChange}
         />
         <span className="submit-button">
           <IconButton icon="fa-plus" onClick={handleButtonClick} />
