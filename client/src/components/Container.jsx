@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Form from "./Form";
 import Table from "./Table";
+import TodayDate from './TodayDate';
 import { useState, useEffect  } from "react";
 
 function Container() {
@@ -52,6 +53,7 @@ function Container() {
     return (
         <div className="container">
             <h1>Todo List</h1>
+            <TodayDate />
             <Form handleSubmit={handleSubmit} />
             <p>Here's what you are doing today.</p>
             <hr></hr>

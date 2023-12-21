@@ -6,11 +6,6 @@ function TableBody(props) {
       <tr key={index}>
         <td>{row}</td>
         <td>
-          <span className="edit-button">
-            <IconButton icon="fa-pen-to-square" onClick={() => {}} />
-          </span>
-        </td>
-        <td>
           <span className="delete-button">
             <IconButton icon="fa-trash" onClick={() => props.removeItem(index)} />
           </span>
