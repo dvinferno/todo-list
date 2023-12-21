@@ -4,10 +4,11 @@ import Table from "./Table";
 
 function Container() {
     return (
-        <div>
+        <div className="container">
             <h1>Todo List</h1>
             <Form />
             <p>Here's what you are doing today.</p>
+            <hr></hr>
             <Table />
         </div>
     );
