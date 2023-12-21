@@ -11,6 +11,7 @@ function Form(props) {
     }
     e.preventDefault();
     props.handleSubmit(todoItem);
+    setTodoItem('')
   };
 
   const handleChange = (e) => {

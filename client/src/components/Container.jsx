@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Form from "./Form";
 import Table from "./Table";
-import { useState } from "react";
+import { useState, useEffect  } from "react";
 
 function Container() {
     const [todoItems, setTodoItems] = useState([]);
@@ -23,9 +23,20 @@ function Container() {
         return null;
     };
 
+    useEffect(() => {
+        const storedItems = getCookie('todoListItems');
+    
+        if (storedItems) {
+          setTodoItems(JSON.parse(storedItems));
+        }
+      }, []);
+
     const handleRemove = (index) => {
         setTodoItems((prevState) => {
             const newArray = prevState.filter((item, i) => i !== index);
+            const data = JSON.stringify(newArray)
+            setCookie('todoListItems', data, 7)
+
             return newArray;
         });
     };
@@ -35,8 +46,7 @@ function Container() {
         setTodoItems(newArray);
 
         const data = JSON.stringify(newArray)
-        console.log(data)
-
+        setCookie('todoListItems', data, 7)
     };
 
     return (
