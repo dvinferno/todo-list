@@ -29,7 +29,7 @@ h1 {
   margin: 50px;
   max-width: 400px;
   width: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   overflow: hidden;
   padding-bottom: 50px;
@@ -39,10 +39,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 input {
+  
   flex-grow: 1;
   padding: 10px;
   border: 2px solid #4e4e4e;
